@@ -20,5 +20,5 @@ steps:
   inputs:
     azureSubscription: 'Azure subscription 1(1)(92a23ff9-4506-4981-af48-d0832ba7eb21)'
     appType: 'webAppLinux'
-    appName: 'html'
+    appName: 'appservice'
     package: '$(System.DefaultWorkingDirectory)/apps/app-service-web-html-get-started-master.zip'
