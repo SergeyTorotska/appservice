@@ -1,0 +1,16 @@
+trigger:
+
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(1)(92a23ff9-4506-4981-af48-d0832ba7eb21)'
+    appType: 'webAppLinux'
+    WebAppName: 'myWebApp-mxzi7q3d3dxmo'
+    packageForLinux: '/home/ITRANSITION.CORP/s.torotko/apps/app-service-web-html-get-started-master.zip'
+
