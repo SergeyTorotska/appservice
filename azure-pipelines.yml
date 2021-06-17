@@ -5,6 +5,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
@@ -16,9 +17,10 @@ steps:
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/SergeyTorotska/appservice/main/app1.json'
     deploymentMode: 'Incremental'
-- task: AzureWebApp@1
+- task: AzureRmWebAppDeployment@4
   inputs:
+    ConnectionType: 'AzureRM'
     azureSubscription: 'Azure subscription 1(1)(92a23ff9-4506-4981-af48-d0832ba7eb21)'
     appType: 'webAppLinux'
-    appName: 'appservice'
-    package: '$(System.DefaultWorkingDirectory)/apps/app-service-web-html-get-started-master.zip'
+    WebAppName: 'myWebApp'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/apps/app-service-web-html-get-started-master.zip'
