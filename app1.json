@@ -129,12 +129,7 @@
                     "minTlsVersion": "1.2",
                     "ipSecurityRestrictions": [
                         {
-                            "vnetSubnetResourceId": "[variables('virtualNetworkSubnetId')]",
-                            "action": "Allow",
-                            "tag": "Default",
-                            "priority": 200,
-                            "name": "appGatewaySubnet",
-                            "description": "Isolate traffic to subnet containing Azure Application Gateway"
+                            
                         }
                     ]
                 },
